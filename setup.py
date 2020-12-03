@@ -1,6 +1,8 @@
 from setuptools import setup, find_packages
 from io import open
 
+print(find_packages('src'))
+
 console_scripts = []
 
 console_scripts.append('{0}={1}.app:main'.format(find_packages('src')[0].replace('_', '-'),

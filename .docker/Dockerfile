@@ -49,6 +49,8 @@ USER ${NB_USER}
 # workdir for binder
 COPY --chown=jovyan:100 . ${HOME}
 
+RUN cd ${HOME} && ${NB_PYTHON_PREFIX}/bin/python setup.py install
+
 ENV PREFIX ${NB_PYTHON_PREFIX}
 
 ENV PATH ${NB_PYTHON_PREFIX}/bin:$PATH
