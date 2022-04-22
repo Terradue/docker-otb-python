@@ -3,6 +3,4 @@ channels:
   - terradue
   - conda-forge
 dependencies:
-  - python=3.7
-  - otb=7.2.0
-  - click
+  - otb=8.0.0
