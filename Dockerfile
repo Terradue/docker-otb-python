@@ -8,7 +8,8 @@ ENV PATH=$PYTHON_PREFIX/bin:$PATH
 
 ADD environment.yml /tmp/environment.yml
 
-RUN micromamba create -f /tmp/environment.yml -c terradue -c conda-forge
+RUN micromamba create -f /tmp/environment.yml -c terradue -c conda-forge && \
+    micromamba clean -a
 
 ENV CMAKE_PREFIX_PATH=${PYTHON_PREFIX}/conda-otb \
     PYTHONPATH=${PYTHON_PREFIX}/conda-otb/lib/python \
