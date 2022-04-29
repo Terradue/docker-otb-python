@@ -3,13 +3,13 @@
 ## Get the docker 
 
 ```console
-docker pull terradue/otb-8.0.0
+docker pull terradue/otb-8.0.1
 ```
 
 Run a container: 
 
 ```console
-docker run --rm -it terradue/otb-8.0.0:latest bash
+docker run --rm -it terradue/otb-8.0.1:latest bash
 ```
 
 ## Run
@@ -17,7 +17,7 @@ docker run --rm -it terradue/otb-8.0.0:latest bash
 Bash console
 
 ```console
-docker run --rm -it otb-8.0.0:latest bash
+docker run --rm -it otb-8.0.1:latest bash
 ```
 
 OTB cli applications are available in PATH.
@@ -25,7 +25,7 @@ OTB cli applications are available in PATH.
 Python 
 
 ```console
-docker run --rm -it otb-8.0.0:latest bash
+docker run --rm -it otb-8.0.1:latest bash
 ```
 
 then
@@ -50,5 +50,5 @@ micromamba install -n env_otb <some package> -c <channel>
 Clone this repo and: 
 
 ```console
-docker build -f .docker/Dockerfile -t otb-8.0.0
+docker build -f .docker/Dockerfile -t otb-8.0.1
 ```

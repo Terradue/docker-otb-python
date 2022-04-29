@@ -3,4 +3,4 @@ channels:
   - terradue
   - conda-forge
 dependencies:
-  - otb=8.0.0
+  - otb=8.0.1
