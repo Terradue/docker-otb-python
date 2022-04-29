@@ -6,6 +6,36 @@ ENV PYTHON_PREFIX=/opt/conda/envs/env_otb
     
 ENV PATH=$PYTHON_PREFIX/bin:$PATH
 
+RUN apt-get update -y \
+ && apt-get upgrade -y \
+ && apt-get install -y --no-install-recommends \
+        ca-certificates \
+        curl \
+        libxcb1 \
+        libxcb-composite0 \
+        libxcb-glx0 \
+        libxcb-icccm4 \
+        libxcb-image0 \
+        libxcb-keysyms1 \
+        libxcb-randr0 \
+        libxcb-render0 \
+        libxcb-render-util0 \
+        libxcb-util1 \
+        libxcb-shm0 \
+        libxcb-xfixes0 \
+        libxcb-xinerama0 \
+        libxcb-xinput0 \
+        libxcb-xkb1 \
+        libxcb-shape0 \
+        libx11-xcb1 \
+        libglu1-mesa \
+        libxrender1 \
+        libxi6 \
+        libxkbcommon0 \
+        libxkbcommon-x11-0 \
+        libxinerama1 
+
+
 ADD environment.yml /tmp/environment.yml
 
 RUN micromamba create -f /tmp/environment.yml -c terradue -c conda-forge && \
