@@ -4,3 +4,4 @@ channels:
   - conda-forge
 dependencies:
   - otb=8.0.1
+  - numpy

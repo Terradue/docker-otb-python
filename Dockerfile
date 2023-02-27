@@ -35,6 +35,8 @@ RUN apt-get update -y \
         libxkbcommon-x11-0 \
         libxinerama1 
 
+USER mambauser
+
 
 ADD environment.yml /tmp/environment.yml
 
@@ -50,4 +52,4 @@ ENV CMAKE_PREFIX_PATH=${PYTHON_PREFIX}/conda-otb \
     LD_LIBRARY_PATH=${PYTHON_PREFIX}/conda-otb/lib \
     PATH=${PYTHON_PREFIX}/conda-otb/bin:$PATH
 
-WORKDIR /tmp
+USER mambauser
